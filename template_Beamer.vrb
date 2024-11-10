@@ -1,0 +1,16 @@
+3、自定义 UDP 数据接收与处理
+\begin{lstlisting}
+Udpdata Udps::userLatticeLoop(uint8_t power, uint8_t mode, uint8_t version)
+\end{lstlisting}
+\small 1）通过 parsePacket() 检查是否有 UDP 数据包，若有则读取到缓冲区packetBuffer并处理
+\\2）根据数据包版本信息和返回类型构造相应的应答包，暂存缓冲区replyPacket，发送给原先发来的远程主机 udp.beginPacket(udp.remoteIP(), udp.remotePort());
+\\3）缓冲区packetBuffer数据对应存放到结构体数据udpdata,并作为函数返回值
+\begin{lstlisting}
+struct Udpdata{
+uint8\_t rt;       // 返回类型
+uint8\_t te;       // 数据类型
+uint8\_t lh;       // 数据长度
+uint8\_t data[64]; // 数据包
+};
+\end{lstlisting}
+\small 结构体定义不必和自定义协议一致，很明显少了VN（版本信息）

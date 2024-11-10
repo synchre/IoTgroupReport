@@ -1,0 +1,6 @@
+\babel@toc {english}{}\relax 
+\beamer@sectionintoc {1}{1.简单的介绍}{2}{0}{1}
+\beamer@sectionintoc {2}{2.esp8266联网\&自定义UDP}{5}{0}{2}
+\beamer@sectionintoc {3}{3.微信小程序}{15}{0}{3}
+\beamer@sectionintoc {4}{4.blinker}{21}{0}{4}
+\beamer@sectionintoc {5}{5.asr}{27}{0}{5}
